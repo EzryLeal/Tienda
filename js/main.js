@@ -211,8 +211,8 @@ function checkout() {
   let message = "¡Hola! Me gustaría hacer un pedido:\n\n"
 
   cart.forEach((item) => {
-    message += `• ${item.name} x${item.quantity} - Q${(item.price * item.quantity).toFixed(2)}\n`
-  })
+  message += `• ${item.name} x${item.quantity} - Q${(item.price * item.quantity).toFixed(2)}\n`;
+  });
 
   message += `\n*Total: Q${total.toFixed(2)}*\n\n`
   message += `Puedes ver el detalle completo aquí: ${cartLink}`
