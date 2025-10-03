@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Mi Tienda</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link" id="cartBtn">
+                    <span>🛒 Carrito</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <a href="admin.html" class="nav-link">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2 class="hero-title">Bienvenido a Nuestra Tienda</h2>
+                <p class="hero-subtitle">Encuentra los mejores productos</p>
+            </section>
+
+            <section class="products" id="productsContainer">
+                <div class="products-grid" id="productsGrid"> 
+                </div>
+            </section>
+        </div>
+    </main>
+
+     
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tu Carrito</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="modal-body" id="cartItems"> 
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount" id="totalAmount">$0.00</span>
+                </div>
+                <button class="btn btn-primary" id="checkoutBtn">Finalizar Compra por WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalProductName"></h2>
+                <button class="close-btn" id="closeProduct">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="product-detail">
+                    <div class="product-images">
+                        <img id="modalMainImage" src="/placeholder.svg" alt="" class="main-image">
+                        <div class="image-thumbnails" id="modalThumbnails"></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-description" id="modalProductDescription"></p>
+                        <p class="product-price" id="modalProductPrice"></p>
+                        <button class="btn btn-primary" id="addToCartBtn">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p id="footerPhone">Teléfono: No configurado</p>
+                    <p id="footerAddress">Dirección: No configurada</p>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; 2025 Mi Tienda. Derechos a quien corresponda.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
