@@ -207,10 +207,10 @@ function checkout() {
     message += `• ${item.name} x${item.quantity} - Q${(item.price * item.quantity).toFixed(2)}\n`;
   });
 
-  message += `\n*Total: Q${total.toFixed(2)}*`;
+  message += `\nTotal: Q${total.toFixed(2)}\n\nGracias por comprar en ${storeConfig.name || "nuestra tienda"} 🙌`;
 
   const whatsappUrl = `https://wa.me/${storeConfig.phone}?text=${encodeURIComponent(message)}`;
-  window.open(whatsappUrl, "_blank");
+  location.href = whatsappUrl;
 
   cart = [];
   saveCart();
